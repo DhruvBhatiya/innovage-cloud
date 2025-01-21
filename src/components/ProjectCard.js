@@ -50,7 +50,7 @@ export const ProjectCard = ({ title, description, imgUrl, link, tech }) => {
         >
           <Box className="!h-[240px] overflow-hidden " style={{
              backgroundImage: `url(${imgUrl})`,
-             backgroundSize: 'cover'
+             backgroundSize: '100% 100%'
           }}>
             {/* <CardMedia
               component="img"

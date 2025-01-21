@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import contactImg from "../../assets/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import "./contact.css"
-
+import "./contact.css";
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -20,6 +19,7 @@ export const Contact = () => {
   const [errors, setErrors] = useState({});
   const [buttonText, setButtonText] = useState("Send");
   const [status, setStatus] = useState({});
+  const [showModal, setShowModal] = useState(false);
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -90,12 +90,23 @@ export const Contact = () => {
 
       setButtonText("Send");
       setFormDetails(formInitialDetails);
-      setStatus({ success: true, message: "Message sent successfully! We will get back to you soon." });
-      setErrors({});
+      setStatus({
+        success: true,
+        message: "Message sent successfully! We will get back to you soon.",
+      });
     } catch (error) {
       setButtonText("Send");
-      setStatus({ success: false, message: "Something went wrong. Please try again." });
+      setStatus({
+        success: false,
+        message: "Something went wrong. Please try again.",
+      });
+    } finally {
+      setShowModal(true); // Show the modal
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -113,15 +124,6 @@ export const Contact = () => {
                 <div>
                   <h2>Get In Touch</h2>
                   <form onSubmit={handleSubmit}>
-                    <Row>
-                      {status.message && (
-                        <Col size={12} className="mb-3">
-                          <p className={status.success === false ? "danger" : "success"}>
-                            {status.message}
-                          </p>
-                        </Col>
-                      )}
-                    </Row>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
                         <input
@@ -179,6 +181,26 @@ export const Contact = () => {
           </Col>
         </Row>
       </Container>
+
+      {/* Modal for status messages */}
+      <Modal show={showModal} onHide={handleCloseModal} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>{status.success ? "Success" : "Error"}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body
+          style={{
+            color: status.success ? "green" : "red",
+            textAlign: "center",
+          }}
+        >
+          {status.message}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </section>
   );
 };

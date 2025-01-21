@@ -40,9 +40,9 @@ export const Skills = () => {
               <Box className="flex flex-wrap gap-7 justify-center">
                 {skillsData &&
                   skillsData.map((db) => (
-                    <Box className="w-[100px] h-[100px] lg:w-[180px] lg:h-[180px] rounded-full bg-white flex justify-center items-center shadow-lg shadow-white">
+                    <Box className="w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] rounded-full bg-white flex justify-center items-center shadow-lg shadow-white">
                       <img
-                        className="w-[70px] h-[70px] lg:w-[150px] lg:h-[150px] rounded-full"
+                        className="w-[70px] h-[70px] lg:w-[130px] lg:h-[130px] rounded-full"
                         src={db}
                         alt="Image"
                       />
