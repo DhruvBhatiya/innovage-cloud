@@ -6,7 +6,7 @@ const UseRefExp1 = () => {
     let inputRef = useRef(null)
 
     const handleInput =()=> {
-        inputRef.current.value="Dhruv"
+        inputRef.current.value="Innovage Cloud"
         // inputRef.current.focus();
         inputRef.current.style.background="yellow"
     }

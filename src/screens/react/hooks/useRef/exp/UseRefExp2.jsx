@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 
 const UseRefExp2 = () => {
   const [isEditing, setEditing] = useState(false);
-  const [isName, setName] = useState("Dhruv");
+  const [isName, setName] = useState("Innovage Cloud");
   const toggleEditing = () => {
     setEditing(!isEditing);
   };
