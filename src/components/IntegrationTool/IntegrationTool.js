@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import Fade from "react-reveal/Fade";
+
 
 import { Box } from "@mui/material";
 import "animate.css";
@@ -24,12 +24,12 @@ export const IntegrationTool = () => {
                       <Box className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
                         {db.project.length == 0 ? <Box className="text-center">No Project Found</Box> :
                           db.project.map((pj, index) => (
-                            <Fade bottom>
+                           
                               <IntegrationCard
                                 key={index}
                                 {...pj}
                               />
-                            </Fade>
+                           
                           ))
                         }
                       </Box>

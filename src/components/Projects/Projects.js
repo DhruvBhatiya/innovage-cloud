@@ -1,7 +1,7 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "../ProjectCard";
 import 'animate.css';
-import Fade from "react-reveal/Fade";
+
 import TrackVisibility from 'react-on-screen';
 import { colorSharp2, } from "../../comman/images";
 import { projectData } from "./projectData";
@@ -44,12 +44,12 @@ export const Projects = () => {
                                 <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
                                   {db.project.length == 0 ? <Box className="text-center">No Project Found</Box> :
                                     db.project.map((pj, index) => (
-                                      <Fade bottom>
+                                   
                                         <ProjectCard
                                           key={index}
                                           {...pj}
                                         />
-                                      </Fade>
+                                    
                                     ))
                                   }
                                 </Box>

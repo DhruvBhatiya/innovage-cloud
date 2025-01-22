@@ -1,5 +1,5 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
+
 import "./HomeNumbers.css";  // Ensure to create a CSS file for styles
 
 import { Row, Container, Col } from "react-bootstrap";
@@ -31,12 +31,12 @@ const HomeNumbers = () => {
           {Number.map((db) => (
             <Col xs={12} md={3} xl={3} className="mb-2 md:mb-0 lg:mb-0 xl:mb-0">
             
-              <Fade bottom>
+           
                 <div className="hnum-box text-center ">
                   <h3 className=" ">{db.value}</h3>
                   <p>{db.text}</p>
                 </div>
-              </Fade>
+             
             </Col>
           ))}
 
