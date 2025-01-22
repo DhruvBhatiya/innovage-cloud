@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
-import contactImg from "../../assets/img/contact-img.svg";
+import contactImg from "../../assets/images/bg/contact.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+
 import "./contact.css";
 
 export const Contact = () => {
@@ -110,22 +111,20 @@ export const Contact = () => {
   };
 
   return (
-    <section className="contact" id="connect">
+    <section className="contact gredientBg 11blackBg" id="connect">
       <Container>
         <Row className="align-items-center">
-          <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) => <img src={contactImg} alt="Contact Us" />}
-            </TrackVisibility>
-          </Col>
-          <Col size={12} md={6}>
+          {/* Left Column: Contact Info */}
+
+          {/* Right Column: Form */}
+          <Col size={12} md={8}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div>
                   <h2>Get In Touch</h2>
                   <form onSubmit={handleSubmit}>
                     <Row>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={6} className="p-1">
                         <input
                           type="text"
                           value={formDetails.firstName}
@@ -134,7 +133,7 @@ export const Contact = () => {
                         />
                         {errors.firstName && <p className="error">{errors.firstName}</p>}
                       </Col>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={6} className="p-1">
                         <input
                           type="text"
                           value={formDetails.lastName}
@@ -143,7 +142,7 @@ export const Contact = () => {
                         />
                         {errors.lastName && <p className="error">{errors.lastName}</p>}
                       </Col>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={6} className="p-1">
                         <input
                           type="email"
                           value={formDetails.email}
@@ -152,7 +151,7 @@ export const Contact = () => {
                         />
                         {errors.email && <p className="error">{errors.email}</p>}
                       </Col>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={6} className="p-1">
                         <input
                           type="tel"
                           value={formDetails.phone}
@@ -161,7 +160,7 @@ export const Contact = () => {
                         />
                         {errors.phone && <p className="error">{errors.phone}</p>}
                       </Col>
-                      <Col size={12} className="px-1">
+                      <Col size={12} className="p-1">
                         <textarea
                           rows="6"
                           value={formDetails.message}
@@ -179,6 +178,39 @@ export const Contact = () => {
               )}
             </TrackVisibility>
           </Col>
+
+          <Col size={12} md={4}>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div className="contact-info">
+                  <h3 className="text-[#a62522]">Contact Info</h3>
+                  <div className="mb-3">
+                    <p className="mb-2 text-[#a62522]"><strong>Address</strong></p>
+                    <p className="">A-406, Titanium Square, <br />Near, Thaltej Metro Station, Thaltej, <br />Ahmedabad- 380054</p>
+                  </div>
+                  <div className="mb-3">
+                    <p className="text-[#a62522]"><strong>Email Us</strong></p>
+                    <p><a href="mailto:info@innovagecloud.com" className="text-white hover:underline"> info@innovagecloud.com</a></p>
+                    <p> <a href="mailto:hr@innovagecloud.com" className="text-white hover:underline"> hr@innovagecloud.com</a></p>
+                  </div>
+                  <div className="mb-3">
+                    <p className="text-[#a62522]"><strong>Call Us</strong></p>
+                    <p><a href="tel:+919023635219" className="text-white hover:underline">+91 9023635219</a></p>
+                  </div>
+
+                  {/* Social Media Icons */}
+                  {/* <div className="social-icons">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook size={30} /></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter size={30} /></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin size={30} /></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram size={30} /></a>
+                  </div> */}
+                </div>
+              )}
+            </TrackVisibility>
+          </Col>
+
+          
         </Row>
       </Container>
 

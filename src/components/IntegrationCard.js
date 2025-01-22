@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 import { Box, IconButton } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'; // Importing the link icon
 
-export const ProjectCard = ({ title, description, imgUrl, link, tech }) => {
+export const IntegrationCard = ({ title, description, imgUrl, link, tech }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
@@ -30,7 +30,6 @@ export const ProjectCard = ({ title, description, imgUrl, link, tech }) => {
     <>
       <Card
         sx={{
-          height: '100%',
           maxWidth: '100%',
           marginBottom: 2,
           overflow: 'hidden',
@@ -49,7 +48,7 @@ export const ProjectCard = ({ title, description, imgUrl, link, tech }) => {
         <CardActionArea
           className='!cursor-default'
         >
-          <Box className="!h-[240px] overflow-hidden " style={{
+          <Box className="!h-[170px] overflow-hidden " style={{
             backgroundImage: `url(${imgUrl})`,
             backgroundSize: '100% 100%'
           }}>
@@ -99,7 +98,8 @@ export const ProjectCard = ({ title, description, imgUrl, link, tech }) => {
                 color: '#90caf9',
                 transition: 'color 0.3s ease',
                 '&:hover': { color: '#64b5f6' },
-                textAlign: 'left',
+                textAlign: 'center',
+                marginBottom: 0
               }}
             >
               {title}
@@ -129,20 +129,7 @@ export const ProjectCard = ({ title, description, imgUrl, link, tech }) => {
                 </button>
               </Typography>
             }
-            <Stack direction="row" spacing={1} mt={2} justifyContent="left">
-              {tech.map((tag, index) => (
-                <Chip
-                  key={index}
-                  label={tag}
-                  sx={{
-                    backgroundColor: '#2e2e2e',
-                    color: '#90caf9',
-                    fontSize: '0.8rem',
-                    fontWeight: 'bold',
-                  }}
-                />
-              ))}
-            </Stack>
+         
           </CardContent>
         </CardActionArea>
       </Card>

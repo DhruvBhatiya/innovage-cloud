@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import "react-multi-carousel/lib/styles.css";
+import Fade from "react-reveal/Fade";
 import colorSharp from "../../assets/img/color-sharp.png";
 import { skillsData } from "./skillsData";
 // Skill
@@ -40,13 +41,15 @@ export const Skills = () => {
               <Box className="flex flex-wrap gap-7 justify-center">
                 {skillsData &&
                   skillsData.map((db) => (
-                    <Box className="w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] rounded-full bg-white flex justify-center items-center shadow-lg shadow-white">
-                      <img
-                        className="w-[70px] h-[70px] lg:w-[130px] lg:h-[130px] rounded-full"
-                        src={db}
-                        alt="Image"
-                      />
-                    </Box>
+                    <Fade bottom>
+                      <Box className="w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] rounded-full bg-white flex justify-center items-center shadow-lg shadow-white">
+                        <img
+                          className="w-[70px] h-[70px] lg:w-[130px] lg:h-[130px] rounded-full"
+                          src={db}
+                          alt="Image"
+                        />
+                      </Box>
+                    </Fade>
                   ))}
               </Box>
 

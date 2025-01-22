@@ -22,15 +22,15 @@ export const projectData = [
                 tech: ['VBCS', 'OIC', 'PLSQL']
             },
             {
-                title: "EXPEDITING",
+                title: "Expediting",
                 description: "Involved in designing/converting the Oracle Forms to a Custom ADF Application to create and manage PO, Prepay Invoice based on PO, Latter of Credit Document Etc..Hands-on experience in designing the pages as per the client's requirement.",
                 imgUrl: EXPEDITING,
                 link: '',
                 tech: ['VBCS', 'OIC', 'PLSQL']
             },
             {
-                title: "Vendor Performance",
-                description: "Developed Vendor Performance Qualification application in VBCS with Oracle DB where business can Evaluate the Vendor Based on Goods Quality, Delivery Time, Capacity and Rates. Understood the requirement from functional team. Developed end-to-end cycle",
+                title: "Vendor Evolution",
+                description: "Developed Vendor Performance Evolution Qualification application in VBCS with Oracle DB where business can Evaluate the Vendor Based on Goods Quality, Delivery Time, Capacity and Rates. Understood the requirement from functional team. Developed end-to-end cycle",
                 imgUrl: vendorPerformance,
                 link: '',
                 tech: ['VBCS', 'OIC', 'PLSQL']

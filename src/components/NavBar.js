@@ -35,8 +35,8 @@ export const NavBar = () => {
       style={{zIndex: 1}}
     >
       <Container>
-        <Navbar.Brand className="flex gap-2 items-center px-2 !w-[300px]" href="/">
-          <img src={logo} alt="Logo" className="!w-[300px]" />
+        <Navbar.Brand className="flex gap-2 items-center px-2 !w-[250px] md:!w-[300px]" href="/">
+          <img src={logo} alt="Logo" className="!w-[250px] md:!w-[300px]" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
@@ -45,7 +45,7 @@ export const NavBar = () => {
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto uppercase">
+          <Nav className="ms-auto uppercase gap-y-3">
             <Nav.Link
               href="#about"
               className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'}

@@ -15,7 +15,7 @@ export const Footer = () => {
 
 
   return (
-    <footer className="footer">
+    <footer className="11footer blackBg !py-8">
       <Container>
         <Row className="align-items-center">
           {/* <MailchimpForm /> */}

@@ -1,8 +1,9 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "../ProjectCard";
 import 'animate.css';
+import Fade from "react-reveal/Fade";
 import TrackVisibility from 'react-on-screen';
-import { colorSharp2,  } from "../../comman/images";
+import { colorSharp2, } from "../../comman/images";
 import { projectData } from "./projectData";
 import { Box } from "@mui/material";
 
@@ -17,7 +18,7 @@ export const Projects = () => {
                 <div
                 // className={isVisible ? "animate__animated animate__fadeIn" : ""}
                 >
-                  <h2 className="mb-16 uppercase">Portfolio</h2>
+                  <h2 className="sectionTitle ">Portfolio</h2>
                   {/* <p className="subtitle">Showcasing my skills and expertise, these projects highlight real-world applications of my work. Each includes a brief description, live demos, and code repositories, demonstrating my ability to solve complex problems, adapt to various technologies, and manage projects efficiently.</p> */}
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     {/* <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
@@ -39,13 +40,16 @@ export const Projects = () => {
                           {
                             projectData.map((db, index) => {
                               return (
+
                                 <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
                                   {db.project.length == 0 ? <Box className="text-center">No Project Found</Box> :
                                     db.project.map((pj, index) => (
-                                      <ProjectCard
-                                        key={index}
-                                        {...pj}
-                                      />
+                                      <Fade bottom>
+                                        <ProjectCard
+                                          key={index}
+                                          {...pj}
+                                        />
+                                      </Fade>
                                     ))
                                   }
                                 </Box>

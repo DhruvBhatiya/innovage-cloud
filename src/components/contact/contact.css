@@ -4,3 +4,31 @@
     margin-bottom: 5px;
   }
   
+
+  .contact-info {
+    padding: 20px;
+  }
+  
+  .contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .social-icons {
+    margin-top: 15px;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+    color: #000;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff;
+  }
+  
